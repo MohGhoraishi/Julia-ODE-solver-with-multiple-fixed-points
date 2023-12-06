@@ -34,7 +34,7 @@ end
 function fit_euler_ode(x1::Number, y1::Number, x2::Number, y2::Number, secondDerX::Function, resolution::Int)
     firstDer = 0
     shift = pi / 4
-    return recursive_euler_fitter(x1, y1, x2, y2, secondDerX, resolution, firstDer, shift)
+    recursive_euler_fitter(x1, y1, x2, y2, secondDerX, resolution, firstDer, shift)
 end
 
 function recursive_euler_fitter(x1::Number, y1::Number, x2::Number, y2::Number, secondDerX::Function, resolution::Int, currentFirstDer::Number, currentShift::Number)
